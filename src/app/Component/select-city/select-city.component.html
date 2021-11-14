@@ -1,0 +1,66 @@
+<!-- Select Cities-->
+<div>
+  <h2 class="select__title">Your Cities</h2>
+  <select
+    (change)="captureLocation(selectedCity)"
+    [(ngModel)]="selectedCity"
+    class="select__city"
+  >
+    <option *ngFor="let city of cities" value="{{ city.name }}" selected>
+      {{ city.name }}
+    </option>
+  </select>
+</div>
+
+<!-- Container Weather -->
+<div *ngIf="weatherData" class="container">
+  <div id="divWeatherMain">
+    <div class="weatherRow">
+      <button
+        type="button"
+        class="btn-close closed"
+        aria-label="Close"
+      ></button>
+      <div class="weatherRow__name">
+        {{ weatherData.name }}
+      </div>
+      <div class="weatherRow__temp">{{ weatherData.fixed }}° C</div>
+      <div class="weatherRow__icon">
+        <img
+          *ngIf="weatherData.fixed >= 25"
+          class="sun"
+          src="'../../../../../assets/icons/hotWeather.svg"
+          alt="weather-icon"
+        />
+
+        <img
+          *ngIf="weatherData.fixed <= 19"
+          class="sun"
+          src="'../../../../../assets/icons/coldWeather.svg"
+          alt="weather-icon"
+        />
+        <img
+          *ngIf="weatherData.fixed > 19 && weatherData.fixed < 25"
+          class="sun"
+          src="'../../../../../assets/icons/warmWeather.svg"
+          alt="weather-icon"
+        />
+        <span *ngIf="weatherData.fixed >= 25" class="watherRow__feels"
+          >Hot</span
+        >
+        <span *ngIf="weatherData.fixed <= 19" class="watherRow__feels"
+          >Cold</span
+        >
+        <span
+          *ngIf="weatherData.fixed > 19 && weatherData.fixed < 25"
+          class="watherRow__feels"
+          >Warm</span
+        >
+      </div>
+      <div>
+        <button class="weatherRow__button">Update</button>
+      </div>
+      <ngx-spinner></ngx-spinner>
+    </div>
+  </div>
+</div>

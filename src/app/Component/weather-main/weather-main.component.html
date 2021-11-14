@@ -1,0 +1,17 @@
+<div class="container">
+  <div id="divWeatherMain">
+    <div class="weatherRow">
+      <div class="weatherRow__name">
+        {{ WeatherData.name }}, {{ WeatherData.sys.country }}
+      </div>
+      <div class="weatherRow__temp">{{ WeatherData.temp_celsius }}° C</div>
+      <div class="weatherRow__icon">
+        <fa-icon class="sun" [icon]="faSun" size="3x"></fa-icon>
+        <span class="watherRow__feels">Hot</span>
+      </div>
+      <div>
+        <button class="weatherRow__button">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

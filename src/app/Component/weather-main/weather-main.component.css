@@ -1,0 +1,63 @@
+.container {
+  width: 100vh;
+  height: 100vh;
+  background-color: #eef0f6;
+}
+#divWeatherMain {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+  height: 330px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5px 30px;
+  width: 290px;
+}
+
+.weatherRow__name {
+  color: #09004e;
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.weatherRow__temp {
+  color: #ff4d00;
+  font-size: 70px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.watherRow__feels {
+  color: #09004e;
+  font-weight: 700;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.weatherRow__icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.sun {
+  color: yellow;
+  filter: drop-shadow(1px 1px 10px yellow);
+}
+
+.weatherRow__button {
+  background-color: #ff4d00;
+  border: none;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  height: 45px;
+  margin-top: 15px;
+  outline: none;
+  width: 160px;
+}
